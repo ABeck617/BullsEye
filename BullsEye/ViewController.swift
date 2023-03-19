@@ -7,13 +7,25 @@
 
 import UIKit
 
+
+// Generate the random number Generate the random number to be used as the target by the game.
+
+// Add rounds to the game: Add the ability to start a new round of the game.
+
+// Display the target value: Display the generated target number on screen.
+
 class ViewController: UIViewController {
+    // imporve the slider: Set the initial slider value (in code) to be whatever value was set in the storyboard instead of assuming an initial value.
+    // This is a variable names slider that is connected to the UISLider object
+    @IBOutlet var slider: UISlider!
     
     var currentValue: Int = 50
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        currentValue = lroundf(slider.value)
     }
 
     @IBAction func showAlert() {
